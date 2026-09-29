@@ -68,6 +68,7 @@ jobs:
         with:
           create_credentials_file: true
           workload_identity_provider: ${{ vars.WORKLOAD_IDENTITY_PROVIDER }}
+          project_id: ${{ vars.GOOGLE_PROJECT_ID }}
 
 
       - name: Collect PR Data and Assets
