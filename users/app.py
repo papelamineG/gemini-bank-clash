@@ -22,6 +22,7 @@ def create_app():
 
     @app.get("/healthz")
     def healthz():
+        """Returns the health status of the users service."""
         return jsonify({"status": "ok"})
 
     @app.post("/users")
