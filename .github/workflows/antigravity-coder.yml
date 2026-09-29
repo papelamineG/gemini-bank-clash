@@ -65,7 +65,7 @@ jobs:
 
       - name: Run Antigravity Coder
         env:
-          CODER_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CODER_GITHUB_TOKEN: ${{ secrets.CODER_PAT || secrets.GITHUB_TOKEN }}
           GOOGLE_PROJECT_ID: ${{ vars.GOOGLE_PROJECT_ID }}
           COMMENT_BODY: ${{ github.event.comment.body }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
